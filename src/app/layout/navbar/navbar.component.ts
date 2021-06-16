@@ -18,4 +18,8 @@ export class NavbarComponent implements OnInit {
   obtenerNivelTamannio(): number {
     return this.navbar.obtenerNivelTamannio();
   }
+
+  cambiarNivelTamannio(n: number): void {
+    this.navbar.cambiarNivelTamannio(n);
+  }
 }

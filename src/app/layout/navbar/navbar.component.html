@@ -22,9 +22,26 @@
       <span class="navbar-text">
         Nivel de tamaño: {{obtenerNivelTamannio()}}
       </span>
-      <button type="button" class="btn text-light">
+      <button type="button" class="btn text-light" [ngbPopover]="popContent" [popoverTitle]="popTitle">
         <i class="fa fa-cog fa-fw"></i>
       </button>
     </div>
   </div>
 </nav>
+
+<ng-template #popTitle>
+  Título
+</ng-template>
+<ng-template #popContent>
+  <div class="d-flex">
+    <button type="button" class="btn btn-sm btn-primary mr-1" (click)="cambiarNivelTamannio(1)">
+      <i class="fa fa-font fa-fw"></i>
+    </button>
+    <button type="button" class="btn btn-primary mr-1" (click)="cambiarNivelTamannio(2)">
+      <i class="fa fa-font fa-fw"></i>
+    </button>
+    <button type="button" class="btn btn-lg btn-primary" (click)="cambiarNivelTamannio(3)">
+      <i class="fa fa-font fa-fw"></i>
+    </button>
+  </div>
+</ng-template>
