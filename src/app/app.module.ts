@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { MainComponent } from './layout/main/main.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NavbarService } from './layout/navbar/navbar.service';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,10 @@ import { MainComponent } from './layout/main/main.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    NgbModule
   ],
-  providers: [],
+  providers: [NavbarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
