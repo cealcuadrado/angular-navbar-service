@@ -12,8 +12,7 @@ export class HomeComponent implements OnInit {
     private navbar: NavbarService
   ) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   obtenerNivelTamannio(): number {
     return this.navbar.obtenerNivelTamannio();
